@@ -1,0 +1,67 @@
+.stopwatch {
+  width: 225px;
+  height: 120px;
+  background: #fff;
+  margin-bottom: 45px;
+  float: left;
+  margin-right: 6.44%;
+  background: #696969;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &.stopwatch-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__top {
+    padding: 18px 10px;
+    text-align: center;
+    font-size: 22px;
+    color: #9E9E9E;
+    border-bottom: 1px solid #9E9E9E;
+
+    &.active {
+      border-bottom: 1px solid #fff;
+      color: #fff;
+    }
+  }
+
+  &__bottom {
+    padding: 20px;
+
+    &-btns {
+      width: 85px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    &.active rect, &.active path {
+      fill: #fff;
+    }
+  }
+
+  
+  @media only screen and (max-width : 800px) {
+    &:nth-child(1n + 1) {
+      margin-right: 0;
+    }
+    &:nth-child(2n + 1) {
+      margin-right: 6.44%;
+    }
+  }
+
+  @media only screen and (max-width : 530px) {
+    & {
+      margin-right: 0!important;
+    }
+  }
+}
